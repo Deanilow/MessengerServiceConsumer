@@ -1,0 +1,30 @@
+
+1. **Generar la Clave Privada (`server.key`):**
+   
+   ```bash
+   openssl genpkey -algorithm RSA -out server.key
+   ```
+
+2. **Generar la Solicitud de Certificado (`server.csr`):**
+   
+   ```bash
+   openssl req -new -key server.key -out server.csr
+   ```
+
+3. **Generar el Certificado Autofirmado (`server.crt`):**
+   
+   ```bash
+   openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+   ```
+
+   Este comando toma la solicitud de certificado (`server.csr`) y la firma con la clave privada (`server.key`) para generar el certificado autofirmado (`server.crt`).
+
+4. **Crear el Archivo de Cadena de Certificados (`ca_bundle.pem`):**
+   
+   ```bash
+   type server.crt > ca_bundle.pem
+   ```
+
+   Este comando crea el archivo `ca_bundle.pem` con el contenido del certificado `server.crt`.
+
+Ahora deberías tener la clave privada (`server.key`), el certificado autofirmado (`server.crt`), y el archivo de cadena de certificados (`ca_bundle.pem`). Puedes usar estos archivos en la configuración de Nginx. Asegúrate de especificar las rutas correctas en tu configuración de Nginx y reiniciar Nginx después de realizar estos pasos.
