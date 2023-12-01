@@ -1,5 +1,6 @@
 const amqp = require('amqplib');
 const logging = require('../../common/logging');
+const config = require('../../configuration');
 
 class MessageBroker {
   constructor() {
@@ -8,14 +9,22 @@ class MessageBroker {
 
   async connect() {
     logging.info('Connecting to RabbitMQ...');
-
+    logging.info(config.rabbitServer);
     try {
-      const connection = await amqp.connect('amqp://guest:guest@rabbitmq:5672');
+      const connection = await amqp.connect(config.rabbitServer);
       this.channel = await connection.createChannel();
-      await this.channel.assertQueue('messagesPending');
+      const queue = 'messagesPending';
+
+      await this.channel.assertQueue(queue, {
+        durable: true,
+        arguments: {
+          'x-queue-type': 'quorum', // Definir la cola como quórum
+        },
+      });
       logging.info('RabbitMQ connected');
     } catch (err) {
       logging.error('Failed to connect to RabbitMQ:', err.message);
+      logging.error('Failed to connect to RabbitMQ:', err);
     }
   }
 

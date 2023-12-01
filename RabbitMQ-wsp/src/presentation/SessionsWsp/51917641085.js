@@ -1,21 +1,40 @@
-// const {
-//   createBot, createProvider, createFlow, addKeyword,
-// } = require('@bot-whatsapp/bot');
-// const BaileysProvider = require('@bot-whatsapp/provider/baileys');
+/* eslint-disable import/no-unresolved */
+const path = require('path');
+const {
+  createBot, createProvider, createFlow,
+} = require('@bot-whatsapp/bot');
 
-// const bot_name = '51917641085';
+const BaileysProvider = require('@bot-whatsapp/provider/baileys');
+const MockAdapter = require('@bot-whatsapp/database/mock');
+const infoging = require('../../common/logging');
 
-// const adapterProvider51917641085 = createProvider(BaileysProvider, {
-//   name: bot_name,
-// });
+const filename = __filename;
 
-// const main51917641085 = async () => {
-//   createBot({
-//     provider: adapterProvider51917641085,
-//   });
-// };
+const numerBotName = path.basename(filename).split('.').shift();
 
-// module.exports = {
-//   main51917641085,
-//   adapterProvider51917641085,
-// };
+const pathPublicQr = path.join(__dirname, '..', '..', 'storage', 'qrs');
+
+const pathSession = path.join(__dirname, '..', '..', 'storage', 'sessions');
+
+infoging.info(`Connect to number : ${numerBotName}`);
+
+const adapterProvider = createProvider(BaileysProvider, {
+  name: numerBotName,
+  qrPath: pathPublicQr,
+  sessionPath: pathSession,
+});
+
+const main = async () => {
+  const adapterDB = new MockAdapter();
+  const adapterFlow = createFlow([]);
+
+  createBot({
+    flow: adapterFlow,
+    provider: adapterProvider,
+    database: adapterDB,
+  });
+};
+module.exports = {
+  main,
+  adapterProvider,
+};

@@ -13,12 +13,11 @@ module.exports.init = (dbConnectionString) => {
   });
   // Connection opened successfully
   mongoose.connection.once('open', () => {
-    logging.info('Connection to MongoDB established');
+    logging.info('MongoDB connected');
     // mongoose.connection.db.dropDatabase()
   });
   mongoose.connection.on('disconnected', () => {
     logging.info('Connection to MongoDB closed');
-    logging.info('-------------------');
   });
 
   return {

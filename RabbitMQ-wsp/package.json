@@ -4,6 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
+        "init": "node src/init.js",
         "start": "node src/server.js",
         "debug": "nodemon src/server.js",
         "lint": "eslint --fix ."

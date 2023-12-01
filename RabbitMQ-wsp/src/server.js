@@ -1,4 +1,6 @@
 require('dotenv').config();
+const fs = require('fs');
+const path = require('path');
 const consumerMessagesService = require('./presentation/RabbitMQ/consumer');
 const {
   dbConnectionString,
@@ -6,7 +8,6 @@ const {
 const signals = require('./signals');
 const dbContainer = require('./data/infrastructure/db');
 const messagesDetailRepositoryContainer = require('./data/repositories/messageDetailRepository');
-const { main } = require('./presentation/SessionsWsp/51900262844');
 
 const db = dbContainer.init(dbConnectionString);
 const messagesDetailRepository = messagesDetailRepositoryContainer.init(db.schemas);
@@ -14,10 +15,18 @@ const messagesDetailRepository = messagesDetailRepositoryContainer.init(db.schem
 const messagesService = consumerMessagesService.init({
   messagesDetailRepository,
 });
-
 messagesService.setupMessageConsumer();
 
-main();
+const folderPath = path.join(__dirname, './presentation/SessionsWsp');
+
+fs.readdir(folderPath, async (error, fileNames) => {
+  for (let i = 0; i < fileNames.length; i += 1) {
+    const filePath = path.join(folderPath, fileNames[i]);
+    // eslint-disable-next-line import/no-dynamic-require, global-require
+    const module = require(filePath);
+    module.main();
+  }
+});
 
 const shutdown = signals.init(async () => {
   await db.close();
@@ -33,16 +42,3 @@ const shutdown = signals.init(async () => {
 
 process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);
-
-// require('dotenv').config();
-// // const express = require('express');
-// // const app = express();
-// // const { main51917641085 } = require('./bot-whatsapp/bot.51917641085');
-// const startConsumers = require('./config/rabbitMQ');
-
-// // app.use(cors());
-// // app.use(express.json());
-
-// // main51917641085();
-
-// startConsumers().catch((e) => console.error('Error al ejecutar el consumidor:', e));
