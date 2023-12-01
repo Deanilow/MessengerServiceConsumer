@@ -1,0 +1,18 @@
+2023-12-01 00:36:53 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\DD\Proyectos\GitLab_Dangamesd\api_bot_wsp\RabbitMQ-wsp\node_modules\node-windows\lib\wrapper.js --file C:\DD\Proyectos\GitLab_Dangamesd\api_bot_wsp\RabbitMQ-wsp\Src\Init.js --scriptoptions= --log "SSSDEMO2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-12-01 00:36:53 - Started 19348
+2023-12-01 00:37:51 - Stopping sssdemo2.exe
+2023-12-01 00:37:51 - ProcessKill 19348
+2023-12-01 00:37:51 - Found child process: 21792 Name: conhost.exe
+2023-12-01 00:37:51 - Found child process: 10732 Name: node.exe
+2023-12-01 00:37:51 - Stopping process 21792
+2023-12-01 00:37:51 - Send SIGINT 21792
+2023-12-01 00:37:51 - SIGINT to 21792 failed - Killing as fallback
+2023-12-01 00:37:51 - Stopping process 10732
+2023-12-01 00:37:51 - Send SIGINT 10732
+2023-12-01 00:37:51 - SIGINT to 10732 failed - Killing as fallback
+2023-12-01 00:37:51 - Stopping process 19348
+2023-12-01 00:37:51 - Send SIGINT 19348
+2023-12-01 00:37:51 - SIGINT to 19348 failed - Killing as fallback
+2023-12-01 00:37:51 - Finished sssdemo2.exe
+2023-12-01 00:38:09 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\DD\Proyectos\GitLab_Dangamesd\api_bot_wsp\RabbitMQ-wsp\node_modules\node-windows\lib\wrapper.js --file C:\DD\Proyectos\GitLab_Dangamesd\api_bot_wsp\RabbitMQ-wsp\Src\Init.js --scriptoptions= --log "SSSDEMO2 wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-12-01 00:38:09 - Started 9724

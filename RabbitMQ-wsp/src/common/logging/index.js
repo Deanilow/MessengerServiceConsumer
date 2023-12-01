@@ -1,4 +1,5 @@
 const winston = require('winston');
+const path = require('path');
 const expressWinston = require('express-winston');
 const {
   PRODUCTION_ENV,
@@ -6,24 +7,33 @@ const {
   INFO_LOGGING_LVL,
 } = require('../constants');
 
+const logFilePath = path.join(__dirname, './../../storage/logs/status.log');
+
 const getTransports = () => {
   const transports = [
     new winston.transports.Console(),
+    new winston.transports.File({
+      filename: logFilePath,
+      format: winston.format.combine(
+        winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+        winston.format.json(),
+      ),
+    }),
   ];
   return transports;
 };
 
 const getFormat = () => winston.format.combine(
-  winston.format.colorize(),
+  winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
   winston.format.json(),
 );
 
 const requestLogger = expressWinston.logger({
   transports: getTransports(),
   format: getFormat(),
-  colorize: true,
-  expressFormat: true,
-  meta: true,
+  // colorize: true,
+  // expressFormat: true,
+  // meta: true,
 });
 
 const errorLogger = expressWinston.errorLogger({

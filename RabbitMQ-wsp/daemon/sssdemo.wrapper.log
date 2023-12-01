@@ -1,0 +1,4 @@
+2023-12-01 00:33:47 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\DD\Proyectos\GitLab_Dangamesd\api_bot_wsp\RabbitMQ-wsp\node_modules\node-windows\lib\wrapper.js --file C:\DD\Proyectos\GitLab_Dangamesd\api_bot_wsp\RabbitMQ-wsp\Init.js --scriptoptions= --log "SSSDEMO wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-12-01 00:33:47 - Started 5716
+2023-12-01 00:33:57 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\DD\Proyectos\GitLab_Dangamesd\api_bot_wsp\RabbitMQ-wsp\node_modules\node-windows\lib\wrapper.js --file C:\DD\Proyectos\GitLab_Dangamesd\api_bot_wsp\RabbitMQ-wsp\Init.js --scriptoptions= --log "SSSDEMO wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-12-01 00:33:57 - Started 4472

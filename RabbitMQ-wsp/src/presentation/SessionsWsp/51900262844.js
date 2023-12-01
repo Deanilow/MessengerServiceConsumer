@@ -12,16 +12,16 @@ const filename = __filename;
 
 const numerBotName = path.basename(filename).split('.').shift();
 
-const pathPublicQr = path.join(__dirname, '..', '..', 'storage', 'qrs');
+// const pathPublicQr = path.join(__dirname, '..', '..', 'storage', 'qrs');
 
-const pathSession = path.join(__dirname, '..', '..', 'storage', 'sessions');
+// const pathSession = path.join(__dirname, '..', '..', 'storage', 'sessions');
 
 infoging.info(`Connect to number : ${numerBotName}`);
 
 const adapterProvider = createProvider(BaileysProvider, {
   name: numerBotName,
-  qrPath: pathPublicQr,
-  sessionPath: pathSession,
+  // qrPath: pathPublicQr,
+  // sessionPath: pathSession,
 });
 
 const main = async () => {
