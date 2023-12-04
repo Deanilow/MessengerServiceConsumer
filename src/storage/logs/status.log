@@ -1,0 +1,84 @@
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 22:28:51"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 22:28:51"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 22:28:53"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51900262844","timestamp":"2023-12-03 22:28:53"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51917641085","timestamp":"2023-12-03 22:28:53"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 22:28:55"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 22:29:04"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 22:30:59"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 22:30:59"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 22:31:01"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51900262844","timestamp":"2023-12-03 22:31:01"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51917641085","timestamp":"2023-12-03 22:31:01"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 22:31:04"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 22:31:12"}
+{"level":"info","message":"Service Windows RabbitMQBackgroundJobsMessengerService from 51900262844-51917641085 Started","timestamp":"2023-12-03 22:33:42"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 22:33:43"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 22:33:43"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 22:33:45"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51900262844","timestamp":"2023-12-03 22:33:45"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51917641085","timestamp":"2023-12-03 22:33:45"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 22:33:48"}
+{"level":"info","message":"Service Windows RabbitMQBackgroundJobsMessengerService from 51900262844-51917641085 uninstalled successfully","timestamp":"2023-12-03 22:34:16"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 23:06:41"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 23:06:41"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 23:06:44"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-03 23:06:44"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-03 23:06:44"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 23:06:46"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 23:06:50"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 23:16:43"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 23:16:43"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 23:16:45"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-03 23:16:45"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-03 23:16:45"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 23:16:47"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 23:16:47"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 23:17:18"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 23:17:18"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 23:17:20"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-03 23:17:21"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-03 23:17:21"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 23:17:23"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 23:17:23"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 23:17:38"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 23:17:38"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 23:17:41"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-03 23:17:41"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-03 23:17:41"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 23:17:43"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 23:17:43"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 23:21:58"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 23:21:58"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 23:22:00"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-03 23:22:00"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-03 23:22:00"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 23:22:03"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 23:22:03"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 23:22:15"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 23:22:15"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 23:22:17"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-03 23:22:17"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-03 23:22:17"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 23:22:20"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 23:22:43"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 23:22:43"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 23:22:45"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-03 23:22:45"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-03 23:22:45"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 23:22:47"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 23:22:47"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 23:23:39"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 23:23:39"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 23:23:42"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-03 23:23:42"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-03 23:23:42"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 23:23:44"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 23:23:44"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-04 10:47:04"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-04 10:47:04"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-04 10:47:07"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51900262844","timestamp":"2023-12-04 10:47:07"}
+{"level":"info","message":"RabbitMQ consume : messagesPending-51917641085","timestamp":"2023-12-04 10:47:07"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-04 10:47:10"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-04 10:47:10"}
