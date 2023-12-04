@@ -6,9 +6,7 @@ const config = require('../../../configuration');
 
 const nameFolder = path.join(__dirname, '../../SessionsWsp');
 
-function init({
-  messagesDetailRepository,
-}) {
+function init({ messagesDetailRepository }) {
   async function setupMessageConsumer() {
     try {
       const amqpServer = config.rabbitServer;
@@ -37,7 +35,9 @@ function init({
             const messageObject = JSON.parse(messageString);
 
             if (messageObject.arrayBody) {
-              const messageObjectArrayBodyAsc = messageObject.arrayBody.sort((a, b) => a.order - b.order);
+              const messageObjectArrayBodyAsc = messageObject.arrayBody.sort(
+                (a, b) => a.order - b.order
+              );
 
               for (let i = 0; i < messageObjectArrayBodyAsc.length; i += 1) {
                 // messagesDetailRepository.updateStatusMessageDetail({
@@ -47,18 +47,28 @@ function init({
                 //   descriptionStatus: 'processing in rabbitmq',
                 // });
 
-                const folderPath = path.join(__dirname, '../../SessionsWsp', messageObject.from);
+                const folderPath = path.join(
+                  __dirname,
+                  '../../SessionsWsp',
+                  messageObject.from
+                );
 
                 // eslint-disable-next-line import/no-dynamic-require, global-require
                 const { adapterProvider } = require(folderPath);
-                infoging.info('1');
 
                 if (messageObjectArrayBodyAsc[i].fileUrl) {
                   // eslint-disable-next-line no-await-in-loop
-                  await adapterProvider.sendMedia(`${messageObject.to}@c.us`, messageObjectArrayBodyAsc[i].fileUrl, messageObjectArrayBodyAsc[i].text || '');
+                  await adapterProvider.sendMedia(
+                    `${messageObject.to}@c.us`,
+                    messageObjectArrayBodyAsc[i].fileUrl,
+                    messageObjectArrayBodyAsc[i].text || ''
+                  );
                 } else {
                   // eslint-disable-next-line no-await-in-loop
-                  await adapterProvider.sendText(`${messageObject.to}@c.us`, messageObjectArrayBodyAsc[i].text);
+                  await adapterProvider.sendText(
+                    `${messageObject.to}@c.us`,
+                    messageObjectArrayBodyAsc[i].text
+                  );
                 }
 
                 // messagesDetailRepository.updateStatusMessageDetail({
@@ -76,7 +86,7 @@ function init({
 
       infoging.info('RabbitMQ connected');
     } catch (err) {
-      infoging.error('Failed to connect to RabbitMQ:', err.message);
+      infoging.error(`Failed to connect to RabbitMQ: ${err.message} `);
     }
   }
 

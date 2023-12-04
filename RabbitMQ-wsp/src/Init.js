@@ -1,13 +1,9 @@
-require('dotenv').config();
-const fs = require('fs');
-const path = require('path');
+const { getPathFullNumberArrayActives } = require('./common/utils/helper');
 
-const folderPath = path.join(__dirname, './presentation/SessionsWsp');
-fs.readdir(folderPath, async (error, fileNames) => {
-  for (let i = 0; i < fileNames.length; i += 1) {
-    const filePath = path.join(folderPath, fileNames[i]);
+getPathFullNumberArrayActives().then((numbersActives) => {
+  numbersActives.forEach((fullPathNumbersActives) => {
     // eslint-disable-next-line import/no-dynamic-require, global-require
-    const module = require(filePath);
+    const module = require(fullPathNumbersActives);
     module.main();
-  }
+  });
 });

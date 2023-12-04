@@ -1,6 +1,22 @@
-{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-01 00:21:46"}
-{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-01 00:21:46"}
-{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-01 00:36:54"}
-{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-01 00:36:54"}
-{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-01 00:38:10"}
-{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-01 00:38:10"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 22:28:51"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 22:28:51"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 22:28:53"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51900262844","timestamp":"2023-12-03 22:28:53"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51917641085","timestamp":"2023-12-03 22:28:53"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 22:28:55"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 22:29:04"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 22:30:59"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 22:30:59"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 22:31:01"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51900262844","timestamp":"2023-12-03 22:31:01"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51917641085","timestamp":"2023-12-03 22:31:01"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 22:31:04"}
+{"level":"info","message":"Connection to MongoDB closed","timestamp":"2023-12-03 22:31:12"}
+{"level":"info","message":"Service Windows RabbitMQBackgroundJobsMessengerService from 51900262844-51917641085 Started","timestamp":"2023-12-03 22:33:42"}
+{"level":"info","message":"Connect to number : 51900262844","timestamp":"2023-12-03 22:33:43"}
+{"level":"info","message":"Connect to number : 51917641085","timestamp":"2023-12-03 22:33:43"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2023-12-03 22:33:45"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51900262844","timestamp":"2023-12-03 22:33:45"}
+{"level":"info","message":"RABBITMQ : queue : messagesPending-51917641085","timestamp":"2023-12-03 22:33:45"}
+{"level":"info","message":"MongoDB connected","timestamp":"2023-12-03 22:33:48"}
+{"level":"info","message":"Service Windows RabbitMQBackgroundJobsMessengerService from 51900262844-51917641085 uninstalled successfully","timestamp":"2023-12-03 22:34:16"}

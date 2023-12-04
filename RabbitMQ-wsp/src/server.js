@@ -1,7 +1,6 @@
 require('dotenv').config();
-const fs = require('fs');
-const path = require('path');
 const consumerMessagesService = require('./presentation/RabbitMQ/consumer');
+const { getPathFullNumberArrayActives } = require('./common/utils/helper');
 const {
   dbConnectionString,
 } = require('./configuration');
@@ -17,15 +16,12 @@ const messagesService = consumerMessagesService.init({
 });
 messagesService.setupMessageConsumer();
 
-const folderPath = path.join(__dirname, './presentation/SessionsWsp');
-
-fs.readdir(folderPath, async (error, fileNames) => {
-  for (let i = 0; i < fileNames.length; i += 1) {
-    const filePath = path.join(folderPath, fileNames[i]);
+getPathFullNumberArrayActives().then((numbersActives) => {
+  numbersActives.forEach((fullPathNumbersActives) => {
     // eslint-disable-next-line import/no-dynamic-require, global-require
-    const module = require(filePath);
+    const module = require(fullPathNumbersActives);
     module.main();
-  }
+  });
 });
 
 const shutdown = signals.init(async () => {
