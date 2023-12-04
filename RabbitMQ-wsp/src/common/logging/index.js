@@ -1,6 +1,5 @@
 const winston = require('winston');
 const path = require('path');
-const expressWinston = require('express-winston');
 const {
   PRODUCTION_ENV,
   VERBOSE_LOGGING_LVL,
@@ -28,19 +27,6 @@ const getFormat = () => winston.format.combine(
   winston.format.json(),
 );
 
-const requestLogger = expressWinston.logger({
-  transports: getTransports(),
-  format: getFormat(),
-  // colorize: true,
-  // expressFormat: true,
-  // meta: true,
-});
-
-const errorLogger = expressWinston.errorLogger({
-  transports: getTransports(),
-  format: getFormat(),
-});
-
 const logger = winston.createLogger({
   level: process.env.NODE_ENV !== PRODUCTION_ENV ? VERBOSE_LOGGING_LVL : INFO_LOGGING_LVL,
   format: getFormat(),
@@ -48,8 +34,6 @@ const logger = winston.createLogger({
 });
 
 module.exports = {
-  requestLogger,
-  errorLogger,
   raw: logger,
   error: logger.error.bind(logger),
   warn: logger.warn.bind(logger),

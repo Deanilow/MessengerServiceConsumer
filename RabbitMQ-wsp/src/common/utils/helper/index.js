@@ -10,15 +10,14 @@ function getRetryAfterSeconds(msBeforeNext) {
 async function getNumberArrayActives() {
   const fileNames = await fs.readdir(folderPath);
   const namesWithoutExtension = fileNames.map(
-    (fileName) => path.parse(fileName).name
+    (fileName) => path.parse(fileName).name,
   );
   return namesWithoutExtension;
 }
 
 async function getPathFullNumberArrayActives() {
   const fileNames = await fs.readdir(folderPath);
-  const namesWithoutExtension = fileNames.map((fileName) =>
-    path.join(folderPath, path.parse(fileName).name));
+  const namesWithoutExtension = fileNames.map((fileName) => path.join(folderPath, path.parse(fileName).name));
   return namesWithoutExtension;
 }
 
