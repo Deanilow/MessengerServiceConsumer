@@ -25,55 +25,60 @@ function init({ messagesDetailRepository }) {
           channel.prefetch(1);
 
           channel.consume(queue, async (data) => {
-            const messageBuffer = data.content;
-            const messageString = messageBuffer.toString();
-            const messageObject = JSON.parse(messageString);
+            const bufferContent = data.content;
+            const stringBuffer = bufferContent.toString();
+            const dataArrayObject = JSON.parse(stringBuffer);
+            for (let xData = 0; xData < dataArrayObject.length; xData += 1) {
 
-            if (messageObject && messageObject.arrayBody) {
-              const messageObjectArrayBodyAsc = messageObject.arrayBody.sort(
-                (a, b) => a.order - b.order,
-              );
+              const data = dataArrayObject[xData].data;
 
-              for (let i = 0; i < messageObjectArrayBodyAsc.length; i += 1) {
-                messagesDetailRepository.updateStatusMessageDetail({
-                  id: messageObjectArrayBodyAsc[i].id,
-                  attempts: 1,
-                  status: 'processing',
-                  descriptionStatus: 'processing in rabbitmq',
-                });
-
-                const folderPath = path.join(
-                  __dirname,
-                  '../../SessionsWsp',
-                  messageObject.from,
+                const objArrayMessages = data.messages.sort(
+                  (a, b) => a.order - b.order
                 );
 
-                // eslint-disable-next-line import/no-dynamic-require, global-require
-                const { adapterProvider } = require(folderPath);
+                for (let i = 0; i < objArrayMessages.length; i += 1) {
+                  messagesDetailRepository.updateStatusMessageDetail({
+                    id: objArrayMessages[i].id,
+                    attempts: 1,
+                    status: 'processing',
+                    descriptionStatus: 'processing in rabbitmq',
+                  });
 
-                if (messageObjectArrayBodyAsc[i].fileUrl) {
-                  // eslint-disable-next-line no-await-in-loop
-                  await adapterProvider.sendMedia(
-                    `${messageObject.to}@c.us`,
-                    messageObjectArrayBodyAsc[i].fileUrl,
-                    messageObjectArrayBodyAsc[i].text || '',
+                  const folderPath = path.join(
+                    __dirname,
+                    '../../SessionsWsp',
+                    data.from
                   );
-                } else {
-                  // eslint-disable-next-line no-await-in-loop
-                  await adapterProvider.sendText(
-                    `${messageObject.to}@c.us`,
-                    messageObjectArrayBodyAsc[i].text,
-                  );
-                }
+                  // eslint-disable-next-line import/no-dynamic-require, global-require
+                  const { adapterProvider } = require(folderPath);
 
-                messagesDetailRepository.updateStatusMessageDetail({
-                  id: messageObjectArrayBodyAsc[i].id,
-                  attempts: 1,
-                  status: 'sent',
-                  descriptionStatus: 'sent message',
-                });
+                  if (objArrayMessages[i].fileUrl) {
+                    // eslint-disable-next-line no-await-in-loop
+                    await adapterProvider.sendMedia(
+                      `${data.to}@c.us`,
+                      objArrayMessages[i].fileUrl,
+                      objArrayMessages[i].text || ''
+                    );
+                  } else {
+                    // eslint-disable-next-line no-await-in-loop
+                    await adapterProvider.sendText(
+                      `${data.to}@c.us`,
+                      objArrayMessages[i].text
+                    );
+                  }
+
+                  messagesDetailRepository.updateStatusMessageDetail({
+                    id: objArrayMessages[i].id,
+                    attempts: 1,
+                    status: 'sent',
+                    descriptionStatus: 'sent message',
+                  });
               }
+              
             }
+
+            // if (messageObject && messageObject.data.length > 0) {
+            // }
             channel.ack(data);
           });
         });
