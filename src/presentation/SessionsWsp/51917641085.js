@@ -12,9 +12,9 @@ const filename = __filename;
 
 const numerBotName = path.basename(filename).split('.').shift();
 
-// const pathPublicQr = path.join(__dirname, '..', '..', 'storage', 'qrs');
+// const pathPublicQr = path.join(filename, '..', '..', 'storage', 'qrs');
 
-// const pathSession = path.join(__dirname, '..', '..', 'storage', 'sessions');
+// const pathSession = path.join(filename, '..', '..', 'storage', 'sessions');
 
 infoging.info(`Connect to number : ${numerBotName}`);
 

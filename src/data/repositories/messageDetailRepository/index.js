@@ -1,18 +1,15 @@
+const { sequelize, Sequelize } = require('../../../configuration/mssql');
+
 const messageDetailStore = {
-  async updateStatusMessageDetail(options) {
-    const { MessageDetail: MessageSchema } = this.getSchemas();
-    await MessageSchema.findOneAndUpdate(
-      { _id: options.id },
-      options,
-      { new: true },
+  async updateStatusMessage(id, status) {
+    await sequelize.query(
+      'UPDATE Messages SET Status = :status WHERE id = :id',
+      {
+        replacements: { status, id },
+        type: Sequelize.QueryTypes.UPDATE,
+      },
     );
   },
 };
 
-module.exports.init = ({ MessageDetail }) => Object.assign(Object.create(messageDetailStore), {
-  getSchemas() {
-    return {
-      MessageDetail,
-    };
-  },
-});
+module.exports.init = () => Object.assign(Object.create(messageDetailStore), {});

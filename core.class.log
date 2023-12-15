@@ -2,10 +2,10 @@
   key: {
     remoteJid: '51917641085@s.whatsapp.net',
     fromMe: false,
-    id: 'BAE5BC2E0876375B',
+    id: 'BAE50BA9828DBAB8',
     participant: undefined
   },
-  messageTimestamp: 1702503976,
+  messageTimestamp: 1702600330,
   pushName: 'D',
   broadcast: false,
   message: Message {
@@ -50,10 +50,10 @@
   key: {
     remoteJid: '51917641085@s.whatsapp.net',
     fromMe: false,
-    id: 'BAE5F4EF2F50310F',
+    id: 'BAE561E3252E0D27',
     participant: undefined
   },
-  messageTimestamp: 1702503976,
+  messageTimestamp: 1702600330,
   pushName: 'D',
   broadcast: false,
   message: Message {
@@ -98,10 +98,10 @@
   key: {
     remoteJid: '51917641085@s.whatsapp.net',
     fromMe: false,
-    id: 'BAE50D309113D19E',
+    id: 'BAE516F26D78C571',
     participant: undefined
   },
-  messageTimestamp: 1702503991,
+  messageTimestamp: 1702600333,
   pushName: 'D',
   broadcast: false,
   message: Message {
@@ -146,10 +146,586 @@
   key: {
     remoteJid: '51917641085@s.whatsapp.net',
     fromMe: false,
-    id: 'BAE52EC1C59BB8E3',
+    id: 'BAE5BBFBA5EEF1F5',
     participant: undefined
   },
-  messageTimestamp: 1702503991,
+  messageTimestamp: 1702600333,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE507CB6A0C39D8',
+    participant: undefined
+  },
+  messageTimestamp: 1702600337,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE55B2DCF7AFA7E',
+    participant: undefined
+  },
+  messageTimestamp: 1702600337,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE576A38B96785E',
+    participant: undefined
+  },
+  messageTimestamp: 1702600343,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE5B62BEDB785F0',
+    participant: undefined
+  },
+  messageTimestamp: 1702600343,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE58F31098E6FCB',
+    participant: undefined
+  },
+  messageTimestamp: 1702600347,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE552303493D1D7',
+    participant: undefined
+  },
+  messageTimestamp: 1702600347,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE5C43BAD52F9FB',
+    participant: undefined
+  },
+  messageTimestamp: 1702600353,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE5AAFB3EC3138C',
+    participant: undefined
+  },
+  messageTimestamp: 1702600353,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE5E594D22A2438',
+    participant: undefined
+  },
+  messageTimestamp: 1702600357,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE5CBFBD6ABE69E',
+    participant: undefined
+  },
+  messageTimestamp: 1702600357,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE5A73AF0CB8ECD',
+    participant: undefined
+  },
+  messageTimestamp: 1702600363,
+  pushName: 'D',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '*PROSEGUR*\n' +
+        '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+        'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+        '*ÉXITO*.\n' +
+        '\n' +
+        'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+        'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+        '*Aquí:* https://wa.link/nzs8br.\n' +
+        '\n' +
+        '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+        '*3150*, es importante que guardes el número en tus contactos.\n' +
+        ' \n' +
+        '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+        '*_informativos._*\n' +
+        '_del negocio.\n' +
+        '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*'
+    }
+  },
+  body: '*PROSEGUR*\n' +
+    '🚨 Le informa que ha tenido *un evento de alarma* en su predio ubicado en CONTACTO, por lo \n' +
+    'que hemos intentado comunicarnos con los miembros de su lista de contactos de emergencia *SIN*\n' +
+    '*ÉXITO*.\n' +
+    '\n' +
+    'Asimismo, hemos aplicado el protocolo correspondiente ✅ al evento de alarma recibido. Para \n' +
+    'mayor información comunicarse con nuestra Central de Atención al Cliente *(01)5138686* o WSP \n' +
+    '*Aquí:* https://wa.link/nzs8br.\n' +
+    '\n' +
+    '📌 Ten en cuenta que toda comunicación de nuestra *Central de Monitoreo* será a través del *531-*\n' +
+    '*3150*, es importante que guardes el número en tus contactos.\n' +
+    ' \n' +
+    '*_Por favor no responder a este número ya que está destinado únicamente para fines_*\n' +
+    '*_informativos._*\n' +
+    '_del negocio.\n' +
+    '*_PROSEGUR ACTIVA PERÚ S.A. -20517930998_*',
+  from: '51917641085'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51917641085@s.whatsapp.net',
+    fromMe: false,
+    id: 'BAE5AB62BCE9F380',
+    participant: undefined
+  },
+  messageTimestamp: 1702600363,
   pushName: 'D',
   broadcast: false,
   message: Message {

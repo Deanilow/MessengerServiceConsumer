@@ -24,62 +24,64 @@ function init({ messagesDetailRepository }) {
           });
           channel.prefetch(1);
 
-          channel.consume(queue, async (data) => {
-            const bufferContent = data.content;
+          channel.consume(queue, async (response) => {
+            const bufferContent = response.content;
             const stringBuffer = bufferContent.toString();
             const dataArrayObject = JSON.parse(stringBuffer);
-            for (let xData = 0; xData < dataArrayObject.length; xData += 1) {
 
-              const data = dataArrayObject[xData].data;
+            if (dataArrayObject && dataArrayObject.length > 0) {
+              for (let xData = 0; xData < dataArrayObject.length; xData += 1) {
+                const { data } = dataArrayObject[xData];
 
                 const objArrayMessages = data.messages.sort(
                   (a, b) => a.order - b.order
                 );
 
                 for (let i = 0; i < objArrayMessages.length; i += 1) {
-                  messagesDetailRepository.updateStatusMessageDetail({
-                    id: objArrayMessages[i].id,
-                    attempts: 1,
-                    status: 'processing',
-                    descriptionStatus: 'processing in rabbitmq',
-                  });
-
-                  const folderPath = path.join(
-                    __dirname,
-                    '../../SessionsWsp',
-                    data.from
+                  messagesDetailRepository.updateStatusMessage(
+                    data.id,
+                    'Proceso'
                   );
-                  // eslint-disable-next-line import/no-dynamic-require, global-require
-                  const { adapterProvider } = require(folderPath);
 
-                  if (objArrayMessages[i].fileUrl) {
-                    // eslint-disable-next-line no-await-in-loop
-                    await adapterProvider.sendMedia(
-                      `${data.to}@c.us`,
-                      objArrayMessages[i].fileUrl,
-                      objArrayMessages[i].text || ''
+                  try {
+                    const folderPath = path.join(
+                      __dirname,
+                      '../../SessionsWsp',
+                      data.from
                     );
-                  } else {
-                    // eslint-disable-next-line no-await-in-loop
-                    await adapterProvider.sendText(
-                      `${data.to}@c.us`,
-                      objArrayMessages[i].text
+                    // eslint-disable-next-line import/no-dynamic-require, global-require
+                    const { adapterProvider } = require(folderPath);
+
+                    if (objArrayMessages[i].fileUrl) {
+                      // eslint-disable-next-line no-await-in-loop
+                      await adapterProvider.sendMedia(
+                        `${data.to}@c.us`,
+                        objArrayMessages[i].fileUrl,
+                        objArrayMessages[i].text || ''
+                      );
+                    } else {
+                      // eslint-disable-next-line no-await-in-loop
+                      await adapterProvider.sendText(
+                        `${data.to}@c.us`,
+                        objArrayMessages[i].text
+                      );
+                    }
+
+                    messagesDetailRepository.updateStatusMessage(
+                      data.id,
+                      'Enviado'
+                    );
+                  } catch (error) {
+                    infoging.info(`Error en envio ${data.id} : ${error}`);
+                    messagesDetailRepository.updateStatusMessage(
+                      data.id,
+                      'Error'
                     );
                   }
-
-                  messagesDetailRepository.updateStatusMessageDetail({
-                    id: objArrayMessages[i].id,
-                    attempts: 1,
-                    status: 'sent',
-                    descriptionStatus: 'sent message',
-                  });
+                }
               }
-              
             }
-
-            // if (messageObject && messageObject.data.length > 0) {
-            // }
-            channel.ack(data);
+            channel.ack(response);
           });
         });
       });

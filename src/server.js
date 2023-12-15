@@ -1,20 +1,30 @@
 require('dotenv').config();
 const consumerMessagesService = require('./presentation/RabbitMQ/consumer');
 const { getPathFullNumberArrayActives } = require('./common/utils/helper');
-const {
-  dbConnectionString,
-} = require('./configuration');
-const signals = require('./signals');
-const dbContainer = require('./data/infrastructure/db');
+
+const { sequelize} = require('./configuration/mssql');
+
 const messagesDetailRepositoryContainer = require('./data/repositories/messageDetailRepository');
 
-const db = dbContainer.init(dbConnectionString);
-const messagesDetailRepository = messagesDetailRepositoryContainer.init(db.schemas);
+sequelize.authenticate().then(() => {
+  console.log('Conexión a la base de datos exitosa');
+}).catch((error) => {
+  console.error('Error al conectar a la base de datos:', error);
+});
+
+sequelize.connectionManager.on('disconnect', () => {
+  console.log('Desconexión detectada. Intentando reconectar...');
+});
+
+sequelize.connectionManager.on('reconnect', () => {
+  console.log('Reconexión exitosa.');
+});
+
+const messagesDetailRepository = messagesDetailRepositoryContainer.init();
 
 const messagesService = consumerMessagesService.init({
   messagesDetailRepository,
 });
-messagesService.setupMessageConsumer();
 
 getPathFullNumberArrayActives().then((numbersActives) => {
   numbersActives.forEach((fullPathNumbersActives) => {
@@ -24,17 +34,9 @@ getPathFullNumberArrayActives().then((numbersActives) => {
   });
 });
 
-const shutdown = signals.init(async () => {
-  await db.close();
-});
+setTimeout(() => {
+  messagesService.setupMessageConsumer();
+}, 5000);
 
-(async () => {
-  try {
-    await db.connect();
-  } catch (error) {
-    await shutdown();
-  }
-})();
-
-process.on('SIGINT', shutdown);
-process.on('SIGTERM', shutdown);
+// process.on('SIGINT', shutdown);
+// process.on('SIGTERM', shutdown);

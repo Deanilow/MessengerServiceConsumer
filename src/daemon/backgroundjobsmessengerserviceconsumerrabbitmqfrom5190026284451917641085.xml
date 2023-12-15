@@ -1,0 +1,31 @@
+<service>
+	<id>backgroundjobsmessengerserviceconsumerrabbitmqfrom5190026284451917641085.exe</id>
+	<name>BackgroundJobsMessengerServiceConsumerRabbitMQ from 51900262844-51917641085</name>
+	<description>RabbitMQ background service for sending messages for numbers : BackgroundJobsMessengerServiceConsumerRabbitMQ from 51900262844-51917641085</description>
+	<executable>C:\Program Files\nodejs\node.exe</executable>
+	<argument>--harmony</argument>
+	<argument>D:\Proyectos\GitHub\MessengerServiceConsumer_js\node_modules\node-windows\lib\wrapper.js</argument>
+	<argument>--file</argument>
+	<argument>D:\Proyectos\GitHub\MessengerServiceConsumer_js\src\server.js</argument>
+	<argument>--scriptoptions=</argument>
+	<argument>--log</argument>
+	<argument>BackgroundJobsMessengerServiceConsumerRabbitMQ from 51900262844-51917641085 wrapper</argument>
+	<argument>--grow</argument>
+	<argument>0.25</argument>
+	<argument>--wait</argument>
+	<argument>1</argument>
+	<argument>--maxrestarts</argument>
+	<argument>3</argument>
+	<argument>--abortonerror</argument>
+	<argument>n</argument>
+	<argument>--stopparentfirst</argument>
+	<argument>undefined</argument>
+	<logmode>rotate</logmode>
+	<stoptimeout>30sec</stoptimeout>
+	<serviceaccount>
+		<domain>DANILO</domain>
+		<user>LocalSystem</user>
+		<password></password>
+	</serviceaccount>
+	<workingdirectory>D:\Proyectos\GitHub\MessengerServiceConsumer_js</workingdirectory>
+</service>

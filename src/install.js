@@ -1,4 +1,4 @@
-const { Service } = require('node-windows');
+const { Service } = require('pm');
 const path = require('path');
 const infoging = require('./common/logging');
 const { getNumberArrayActives } = require('./common/utils/helper');

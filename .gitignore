@@ -2,3 +2,4 @@ node_modules/
 *_sessions/
 .env
 *.qr.png
+*.log
