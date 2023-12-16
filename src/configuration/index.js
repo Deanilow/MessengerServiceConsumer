@@ -3,7 +3,7 @@ require('dotenv').config();
 const config = {
   httpPort: process.env.HTTP_PORT || 8080,
   rabbitServer: process.env.RABBITMQ_SERVER,
-  rabbitServiceWindows: process.env.DEFAULT_NAME_SERVICE_WINDOWS,
+  rabbitServiceWindows: process.env.DEFAULT_NAME_WORKER,
   dialectDB: process.env.DIALECT_DB,
   hostDB: process.env.HOST_DB,
   portDB: process.env.PORT_DB,

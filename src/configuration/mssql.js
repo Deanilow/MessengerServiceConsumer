@@ -6,12 +6,18 @@ const sequelize = new Sequelize(config.nameDB, config.userDB, config.passwordDB,
   dialect: config.dialectDB,
   host: config.hostDB,
   port: config.portDB,
+  synchronize: true,
   pool: {
-    max: 10,
-    min: 0,
-    acquire: 30000,
-    idle: 10000,
+    max: 64,
+    min: 2,
+    acquire: 300000,
+    idle: 30000,
+    encrypt: false,
   },
+  requestTimeout :30000
+  // dialectOptions: {
+  //   requestTimeout: 30000, 
+  // },
 });
 module.exports = {
   sequelize,

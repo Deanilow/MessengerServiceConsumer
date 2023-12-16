@@ -12,13 +12,13 @@ sequelize.authenticate().then(() => {
   console.error('Error al conectar a la base de datos:', error);
 });
 
-sequelize.connectionManager.on('disconnect', () => {
-  console.log('Desconexión detectada. Intentando reconectar...');
-});
+// sequelize.connectionManager.on('disconnect', () => {
+//   console.log('Desconexión detectada. Intentando reconectar...');
+// });
 
-sequelize.connectionManager.on('reconnect', () => {
-  console.log('Reconexión exitosa.');
-});
+// sequelize.connectionManager.on('reconnect', () => {
+//   console.log('Reconexión exitosa.');
+// });
 
 const messagesDetailRepository = messagesDetailRepositoryContainer.init();
 
