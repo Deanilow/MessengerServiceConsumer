@@ -2,12 +2,12 @@ const { Service } = require('node-windows');
 const path = require('path');
 const infoging = require('./common/logging');
 const { getNumberArrayActives } = require('./common/utils/helper');
-const { rabbitServiceWindows } = require('./configuration');
+const { nameService } = require('./configuration');
 
 getNumberArrayActives()
   .then((NumberArrayActives) => {
     const nameNumbersActives = NumberArrayActives.join('-');
-    const nameService = `${rabbitServiceWindows} from ${nameNumbersActives}`;
+    const nameService = `${nameService} from ${nameNumbersActives}`;
 
     const pathScriptExecute = path.join(__dirname, 'server.js');
     const svc = new Service({

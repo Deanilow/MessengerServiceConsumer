@@ -6,7 +6,18 @@ const {
   INFO_LOGGING_LVL,
 } = require('../constants');
 
-const logFilePath = path.join(__dirname, './../../storage/logs/status.log');
+const  config  = require('../../configuration');
+
+const getCurrentDate = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = (today.getMonth() + 1).toString().padStart(2, '0');
+  const day = today.getDate().toString().padStart(2, '0');
+  return `${year}${month}${day}`;
+};
+
+const logFileName = `${config.nameService}_${getCurrentDate()}.log`;
+const logFilePath = path.join(__dirname, `./../../storage/logs/${logFileName}`);
 
 const getTransports = () => {
   const transports = [

@@ -14,9 +14,9 @@ const sequelize = new Sequelize(config.nameDB, config.userDB, config.passwordDB,
     idle: 30000,
     encrypt: false,
   },
-  requestTimeout :30000
+  requestTimeout: 30000,
   // dialectOptions: {
-  //   requestTimeout: 30000, 
+  //   requestTimeout: 30000,
   // },
 });
 module.exports = {

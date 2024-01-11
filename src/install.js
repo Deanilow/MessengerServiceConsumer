@@ -1,4 +1,3 @@
-const { Service } = require('pm');
 const path = require('path');
 const infoging = require('./common/logging');
 const { getNumberArrayActives } = require('./common/utils/helper');
@@ -7,7 +6,7 @@ const config = require('./configuration');
 getNumberArrayActives()
   .then((NumberArrayActives) => {
     const nameNumbersActives = NumberArrayActives.join('-');
-    const nameService = `${config.rabbitServiceWindows} from ${nameNumbersActives}`;
+    const nameService = `${config.nameService} from ${nameNumbersActives}`;
     const pathScriptExecute = path.join(__dirname, 'server.js');
     const svc = new Service({
       name: nameService,

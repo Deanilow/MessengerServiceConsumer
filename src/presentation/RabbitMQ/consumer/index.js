@@ -23,64 +23,58 @@ function init({ messagesDetailRepository }) {
             },
           });
           channel.prefetch(1);
-
           channel.consume(queue, async (response) => {
             const bufferContent = response.content;
             const stringBuffer = bufferContent.toString();
             const dataArrayObject = JSON.parse(stringBuffer);
+            const objArrayMessages = dataArrayObject.data.messages.sort(
+              (a, b) => a.order - b.order,
+            );
 
-            if (dataArrayObject && dataArrayObject.length > 0) {
-              for (let xData = 0; xData < dataArrayObject.length; xData += 1) {
-                const { data } = dataArrayObject[xData];
+            messagesDetailRepository.updateStatusMessage(
+              dataArrayObject.data.id,
+              'Proceso',
+              'En service rabbitmq'
+            );
 
-                const objArrayMessages = data.messages.sort(
-                  (a, b) => a.order - b.order
+            for (let i = 0; i < objArrayMessages.length; i += 1) {
+              try {
+                const folderPath = path.join(
+                  __dirname,
+                  '../../SessionsWsp',
+                  dataArrayObject.data.from,
                 );
-
-                for (let i = 0; i < objArrayMessages.length; i += 1) {
-                  messagesDetailRepository.updateStatusMessage(
-                    data.id,
-                    'Proceso'
+                // eslint-disable-next-line import/no-dynamic-require, global-require
+                const { adapterProvider } = require(folderPath);
+                if (objArrayMessages[i].fileUrl) {
+                  // eslint-disable-next-line no-await-in-loop
+                  await adapterProvider.sendMedia(
+                    `${dataArrayObject.data.to}@c.us`,
+                    objArrayMessages[i].fileUrl,
+                    objArrayMessages[i].text || '',
                   );
-
-                  try {
-                    const folderPath = path.join(
-                      __dirname,
-                      '../../SessionsWsp',
-                      data.from
-                    );
-                    // eslint-disable-next-line import/no-dynamic-require, global-require
-                    const { adapterProvider } = require(folderPath);
-
-                    if (objArrayMessages[i].fileUrl) {
-                      // eslint-disable-next-line no-await-in-loop
-                      await adapterProvider.sendMedia(
-                        `${data.to}@c.us`,
-                        objArrayMessages[i].fileUrl,
-                        objArrayMessages[i].text || ''
-                      );
-                    } else {
-                      // eslint-disable-next-line no-await-in-loop
-                      await adapterProvider.sendText(
-                        `${data.to}@c.us`,
-                        objArrayMessages[i].text
-                      );
-                    }
-
-                    messagesDetailRepository.updateStatusMessage(
-                      data.id,
-                      'Enviado'
-                    );
-                  } catch (error) {
-                    infoging.info(`Error en envio ${data.id} : ${error}`);
-                    messagesDetailRepository.updateStatusMessage(
-                      data.id,
-                      'Error'
-                    );
-                  }
+                } else {
+                  // eslint-disable-next-line no-await-in-loop
+                  await adapterProvider.sendText(
+                    `${dataArrayObject.data.to}@c.us`,
+                    objArrayMessages[i].text,
+                  );
                 }
+              } catch (error) {
+                infoging.info(`Error en envio del codigo ${dataArrayObject.data.id} en siguiente numero de envio ${dataArrayObject.data.from} a ${dataArrayObject.data.to} : ${error}`);
+                messagesDetailRepository.updateStatusMessage(
+                  dataArrayObject.data.id,
+                  'Error',
+                  error
+                );
               }
             }
+
+            messagesDetailRepository.updateStatusMessage(
+              dataArrayObject.data.id,
+              'Enviado',
+              'Ok'
+            );
             channel.ack(response);
           });
         });

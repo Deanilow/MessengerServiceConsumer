@@ -4,7 +4,8 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "init": "node src/install.js",
+        "deploy": "node src/install.js",
+        "init": "node src/init.js",
         "fin": "node src/uninstall.js",
         "start": "node src/server.js",
         "debug": "nodemon src/server.js",
