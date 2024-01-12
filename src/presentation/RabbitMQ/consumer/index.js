@@ -30,6 +30,7 @@ function init({ messagesDetailRepository }) {
             const objArrayMessages = dataArrayObject.data.messages.sort(
               (a, b) => a.order - b.order,
             );
+            infoging.info(`RabbitMQ consume : ${JSON.stringify(dataArrayObject )}`);
 
             messagesDetailRepository.updateStatusMessage(
               dataArrayObject.data.id,

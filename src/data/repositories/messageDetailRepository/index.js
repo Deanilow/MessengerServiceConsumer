@@ -4,7 +4,7 @@ const messageDetailStore = {
   async updateStatusMessage(id, status , statusDescription) {
     try {
       await sequelize.query(
-        'UPDATE [wsp].[Messages] SET [Status] = :status ,  [StatusDescription] = :status WHERE id = :id',
+        'UPDATE [wsp].[Messages] SET [Status] = :status ,  [StatusDescription] = :statusDescription WHERE id = :id',
         {
           replacements: { status, statusDescription , id },
           type: Sequelize.QueryTypes.UPDATE,
