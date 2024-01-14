@@ -1,5 +1,12 @@
 require('dotenv').config();
 
+const env = process.env.NODE_ENV || 'development';
+
+if (env === 'production') {
+  require('dotenv').config({ path: '.env.production' });
+} else {
+  require('dotenv').config({ path: '.env.development' });
+}
 const config = {
   httpPort: process.env.HTTP_PORT || 8080,
   rabbitServer: process.env.RABBITMQ_SERVER,

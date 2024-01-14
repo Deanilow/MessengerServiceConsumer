@@ -30,13 +30,15 @@ function init({ messagesDetailRepository }) {
             const objArrayMessages = dataArrayObject.data.messages.sort(
               (a, b) => a.order - b.order,
             );
-            infoging.info(`RabbitMQ consume : ${JSON.stringify(dataArrayObject )}`);
 
             messagesDetailRepository.updateStatusMessage(
               dataArrayObject.data.id,
               'Proceso',
-              'En service rabbitmq'
+              'En service rabbitmq',
+              'ServiceWorker Consumer RabbitMQ',
             );
+
+            infoging.info(`RabbitMQ consume : ${JSON.stringify(dataArrayObject)}`);
 
             for (let i = 0; i < objArrayMessages.length; i += 1) {
               try {
@@ -61,12 +63,15 @@ function init({ messagesDetailRepository }) {
                     objArrayMessages[i].text,
                   );
                 }
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
               } catch (error) {
                 infoging.info(`Error en envio del codigo ${dataArrayObject.data.id} en siguiente numero de envio ${dataArrayObject.data.from} a ${dataArrayObject.data.to} : ${error}`);
                 messagesDetailRepository.updateStatusMessage(
                   dataArrayObject.data.id,
                   'Error',
-                  error
+                  JSON.stringify(error),
+                  'ServiceWorker Consumer RabbitMQ',
                 );
               }
             }
@@ -74,7 +79,8 @@ function init({ messagesDetailRepository }) {
             messagesDetailRepository.updateStatusMessage(
               dataArrayObject.data.id,
               'Enviado',
-              'Ok'
+              'Ok',
+              'ServiceWorker Consumer RabbitMQ',
             );
             channel.ack(response);
           });

@@ -1,7 +1,5 @@
-require('dotenv').config();
 const Sequelize = require('sequelize');
 const config = require('.');
-
 const sequelize = new Sequelize(config.nameDB, config.userDB, config.passwordDB, {
   dialect: config.dialectDB,
   host: config.hostDB,
@@ -15,9 +13,6 @@ const sequelize = new Sequelize(config.nameDB, config.userDB, config.passwordDB,
     encrypt: false,
   },
   requestTimeout: 30000,
-  // dialectOptions: {
-  //   requestTimeout: 30000,
-  // },
 });
 module.exports = {
   sequelize,

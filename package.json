@@ -2,7 +2,7 @@
     "name": "service_rabbitmq",
     "version": "1.0.0",
     "description": "",
-    "main": "app.js",
+    "main": "src/server.js",
     "scripts": {
         "deploy": "node src/install.js",
         "init": "node src/init.js",
