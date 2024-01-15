@@ -1,4 +1,3 @@
-require('dotenv').config();
 const consumerMessagesService = require('./presentation/RabbitMQ/consumer');
 const { getPathFullNumberArrayActives } = require('./common/utils/helper');
 

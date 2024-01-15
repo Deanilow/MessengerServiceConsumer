@@ -63,7 +63,7 @@ function init({ messagesDetailRepository }) {
                     objArrayMessages[i].text,
                   );
                 }
-                await new Promise(resolve => setTimeout(resolve, 1000));
+                await new Promise(resolve => setTimeout(resolve, 1000 * parseInt(config.secondsWaittingPerMessage)));
 
               } catch (error) {
                 infoging.info(`Error en envio del codigo ${dataArrayObject.data.id} en siguiente numero de envio ${dataArrayObject.data.from} a ${dataArrayObject.data.to} : ${error}`);

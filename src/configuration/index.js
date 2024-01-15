@@ -17,6 +17,7 @@ const config = {
   userDB: process.env.USER_DB,
   passwordDB: process.env.PASSWORD_DB,
   nameDB: process.env.NAME_DB,
+  secondsWaittingPerMessage: process.env.SECONDS_WAITING_PER_MESSAGE,
 };
 
 module.exports = config;
