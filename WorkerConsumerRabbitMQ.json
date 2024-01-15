@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "WorkerConsumerRabbitMQ",
+      "script": "D:\\Dev\\MessengerServiceConsumer_js\\src\\server.js",
+      "cwd": "D:\\Dev\\MessengerServiceConsumer_js",
+      "instances": 1, 
+      "exec_mode": "cluster",
+      "max_memory_restart": "2G",
+      "log_date_format": "MM-DD--YYYY HH:mm Z",
+      "max_restarts": 5,
+      "autorestart": true
+    }
+  ]
+}
