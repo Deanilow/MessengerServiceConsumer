@@ -18,6 +18,7 @@ const config = {
   passwordDB: process.env.PASSWORD_DB,
   nameDB: process.env.NAME_DB,
   secondsWaittingPerMessage: process.env.SECONDS_WAITING_PER_MESSAGE,
+  pathFileLogs: process.env.PATH_FILE_LOGS,
 };
 
 module.exports = config;

@@ -16,8 +16,9 @@ const getCurrentDate = () => {
   return `${year}${month}${day}`;
 };
 
-const logFileName = `${config.nameService}_${getCurrentDate()}.log`;
-const logFilePath = path.join(__dirname, `./../../storage/logs/${logFileName}`);
+const logFileName = `${config.nameService}_${getCurrentDate()}.txt`;
+// const logFilePath = path.join(__dirname, `./../../storage/logs/${logFileName}`);
+const logFilePath = path.join(`${config.pathFileLogs}/${logFileName}`);
 
 const getTransports = () => {
   const transports = [
