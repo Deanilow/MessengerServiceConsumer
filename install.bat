@@ -53,7 +53,6 @@ REM Contenido del JSON
   echo       "cwd": "%cwd%",
   echo       "instances": %instances%, 
   echo       "exec_mode": "cluster",
-  echo       "exp_backoff_restart_delay": 100,
   echo       "max_memory_restart": "2G",
   echo       "log_date_format": "MM-DD--YYYY HH:mm Z",
   echo       "max_restarts": 5,

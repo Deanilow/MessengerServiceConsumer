@@ -1,4 +1,4 @@
-const { getPathFullNumberArrayActives } = require('./common/utils/helper');
+const { getPathFullNumberArrayActives ,getBlockedNumbers, setBlockedNumbers } = require('./common/utils/helper');
 
 getPathFullNumberArrayActives().then((numbersActives) => {
   numbersActives.forEach((fullPathNumbersActives) => {
@@ -7,3 +7,17 @@ getPathFullNumberArrayActives().then((numbersActives) => {
     module.main();
   });
 });
+
+// async function main() {
+
+//   const jsonData = await getBlockedNumbers()
+//   console.log(jsonData)
+
+//   const jsonData2 = await setBlockedNumbers(`${jsonData};51919212223`)
+
+//   const jsonData3= await getBlockedNumbers()
+//   console.log(jsonData3 )
+
+// } 
+
+// main()

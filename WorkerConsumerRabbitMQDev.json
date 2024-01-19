@@ -6,6 +6,7 @@
       "cwd": "D:\\Dev\\MessengerServiceConsumer_js",
       "instances": 1, 
       "exec_mode": "cluster",
+      "exp_backoff_restart_delay": 100,
       "max_memory_restart": "2G",
       "log_date_format": "MM-DD--YYYY HH:mm Z",
       "max_restarts": 5,

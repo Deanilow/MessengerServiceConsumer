@@ -2,7 +2,7 @@ const amqp = require('amqplib');
 const path = require('path');
 const infoging = require('../../../common/logging');
 const config = require('../../../configuration');
-const { getNumberArrayActives } = require('../../../common/utils/helper');
+const { getNumberArrayActives, getBlockedNumbers, setBlockedNumbers } = require('../../../common/utils/helper');
 
 function init({ messagesDetailRepository }) {
   async function setupMessageConsumer() {
@@ -27,61 +27,69 @@ function init({ messagesDetailRepository }) {
             const bufferContent = response.content;
             const stringBuffer = bufferContent.toString();
             const dataArrayObject = JSON.parse(stringBuffer);
-            const objArrayMessages = dataArrayObject.data.messages.sort(
-              (a, b) => a.order - b.order,
-            );
+            const jsonData = await getBlockedNumbers()
+            infoging.info(`RabbitMQ consume : ${dataArrayObject.data.id}`);
 
-            messagesDetailRepository.updateStatusMessage(
-              dataArrayObject.data.id,
-              'Proceso',
-              'En service rabbitmq',
-              'ServiceWorker Consumer RabbitMQ',
-            );
+            if (!jsonData.includes(dataArrayObject.data.from)) {
+              const objArrayMessages = dataArrayObject.data.messages.sort(
+                (a, b) => a.order - b.order,
+              );
 
-            infoging.info(`RabbitMQ consume : ${JSON.stringify(dataArrayObject)}`);
+              messagesDetailRepository.updateStatusMessage(
+                dataArrayObject.data.id,
+                'Proceso',
+                'En service rabbitmq',
+                'ServiceWorker Consumer RabbitMQ',
+              );
 
-            for (let i = 0; i < objArrayMessages.length; i += 1) {
-              try {
-                const folderPath = path.join(
-                  __dirname,
-                  '../../SessionsWsp',
-                  dataArrayObject.data.from,
-                );
-                // eslint-disable-next-line import/no-dynamic-require, global-require
-                const { adapterProvider } = require(folderPath);
-                if (objArrayMessages[i].fileUrl) {
-                  // eslint-disable-next-line no-await-in-loop
-                  await adapterProvider.sendMedia(
-                    `${dataArrayObject.data.to}@c.us`,
-                    objArrayMessages[i].fileUrl,
-                    objArrayMessages[i].text || '',
+              for (let i = 0; i < objArrayMessages.length; i += 1) {
+                try {
+                  const folderPath = path.join(
+                    __dirname,
+                    '../../SessionsWsp',
+                    dataArrayObject.data.from,
                   );
-                } else {
-                  // eslint-disable-next-line no-await-in-loop
-                  await adapterProvider.sendText(
-                    `${dataArrayObject.data.to}@c.us`,
-                    objArrayMessages[i].text,
+                  // eslint-disable-next-line import/no-dynamic-require, global-require
+                  const { adapterProvider } = require(folderPath);
+                  if (objArrayMessages[i].fileUrl) {
+                    // eslint-disable-next-line no-await-in-loop
+                    await adapterProvider.sendMedia(
+                      `${dataArrayObject.data.to}@c.us`,
+                      objArrayMessages[i].fileUrl,
+                      objArrayMessages[i].text || '',
+                    );
+                  } else {
+                    // eslint-disable-next-line no-await-in-loop
+                    await adapterProvider.sendText(
+                      `${dataArrayObject.data.to}@c.us`,
+                      objArrayMessages[i].text,
+                    );
+                  }
+                  await new Promise(resolve => setTimeout(resolve, 1000 * parseInt(config.secondsWaittingPerMessage)));
+
+                } catch (error) {
+                  var errorDescriptionJson = JSON.stringify(error);
+                  infoging.info(`Error en envio del codigo ${dataArrayObject.data.id} en siguiente numero de envio ${dataArrayObject.data.from} a ${dataArrayObject.data.to} : ${error}`);
+                  messagesDetailRepository.updateStatusMessage(
+                    dataArrayObject.data.id,
+                    'Error',
+                    errorDescriptionJson,
+                    'ServiceWorker Consumer RabbitMQ',
                   );
+                  if (errorDescriptionJson.includes('Connection Closed')) {
+                    var newBlockedNumbers = jsonData === "" ? dataArrayObject.data.to : `${jsonData};${dataArrayObject.data.to}`
+                    await setBlockedNumbers(newBlockedNumbers);
+                  }
                 }
-                await new Promise(resolve => setTimeout(resolve, 1000 * parseInt(config.secondsWaittingPerMessage)));
-
-              } catch (error) {
-                infoging.info(`Error en envio del codigo ${dataArrayObject.data.id} en siguiente numero de envio ${dataArrayObject.data.from} a ${dataArrayObject.data.to} : ${error}`);
-                messagesDetailRepository.updateStatusMessage(
-                  dataArrayObject.data.id,
-                  'Error',
-                  JSON.stringify(error),
-                  'ServiceWorker Consumer RabbitMQ',
-                );
               }
-            }
 
-            messagesDetailRepository.updateStatusMessage(
-              dataArrayObject.data.id,
-              'Enviado',
-              'Ok',
-              'ServiceWorker Consumer RabbitMQ',
-            );
+              messagesDetailRepository.updateStatusMessage(
+                dataArrayObject.data.id,
+                'Enviado',
+                'Ok',
+                'ServiceWorker Consumer RabbitMQ',
+              );
+            }
             channel.ack(response);
           });
         });

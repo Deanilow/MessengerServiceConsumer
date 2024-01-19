@@ -18,7 +18,9 @@ const getCurrentDate = () => {
 
 const logFileName = `${config.nameService}_${getCurrentDate()}.txt`;
 // const logFilePath = path.join(__dirname, `./../../storage/logs/${logFileName}`);
+// const path = config.pathFileLogs || path.join(__dirname, `./../../storage/logs`)
 const logFilePath = path.join(`${config.pathFileLogs}/${logFileName}`);
+// const logFilePath = path.join(`${path}/${logFileName}`);
 
 const getTransports = () => {
   const transports = [
